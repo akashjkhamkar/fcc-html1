@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      hr{
+        animation-name: hr;
+        animation-duration: 4s;
+        animation-timing-function:ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes hr{
+        0%{
+          color: aquamarine;
+          width: 0%;
+        }
+        25%{
+          color: blueviolet;
+          width: 25%;
+        }
+        50%{
+          color: yellow;
+          width: 50%;
+
+        }
+        75%{
+          color: springgreen;
+          width: 75%;
+        }
+        100%{
+          color:aquamarine;
+        }
+      }
+      body{
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+      }
+      form{
+
+        margin: auto;
+        left:0px;
+        right:0px;
+        padding: 20px;
+        text-align: center;
+        line-height: 30px;
+
+        font-family:monospace;
+        font-size: 15px;
+
+        
+      }
+      input{
+        margin: 10px;
+        background: white;
+        border-radius: 10px;
+        color: inherit;
+      }
+      #more{
+        background-color: white;
+        color: inherit;
+        height: 200px;
+        width:400px;
+      }
+      .os{
+        display: grid;
+
+      }
+      button{
+        border-radius: 10px;
+        width: 130px;
+      }
+      button:hover{
+        color: black;
+        background-color: darkturquoise;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form id="survey-form" action="thank.html" method="post">
+      <h1 id="title">Survey for pineapple phone x</h1><br>
+      <hr style="color:cyan ; widows: 110% ; ">
+      <p id="description">help us to improve your favourite pineapple phone x.</p><br>
+      <label id="name-label" for="name">name</label>
+      <input type="text" id="name" name="name" placeholder="eg. pandu mohire" required><br>
+
+      <label id="email-label" for="email">email</label>
+      <input type="text" id="email" name="email" placeholder="eg. pandu mohire" required formnovalidate><br>
+
+      <label id="number-label" for="number">how many pineapple devices do you have ?<br> </label>
+      <input type="number" min="1" max="10" name="number" placeholder="eg. pandu mohire" required formnovalidate><br>
+
+      <label for="country">country</label>
+      <input type="text" name="country" list="dropdown"/>
+      <datalist id="dropdown">
+        <option value="India"></option>
+        <option value="Us"></option>
+        <option value="England"></option>
+        <option value="Australia"></option>
+      </datalist><br>
+      <hr style="color:darkcyan" width="50%">
+      <h2>choose your pineapple phone os version.</h2><br>
+      <div class="os">
+        <input type="radio" id="9" name="os" >
+        <label for="9">9</label>
+        <input type="radio" id="10" name="os" >
+        <label for="10">10</label>
+        <input type="radio" id="11" name="os" >
+        <label for="11">11</label>
+        <input type="radio" id="12.2" name="os" >
+        <label for="12.2">12.2</label>
+      </div>
+      <hr style="color:darkcyan" width="50%">
+
+      <h2>select features you liked below</h2><br>
+      <div class="features">
+        <label for=""><input type="checkbox" id="fast" value="">fast-charging</label>
+        <label for=""><input type="checkbox" id="3x" value="">3 x camera lenses</label>
+        <label for=""><input type="checkbox" id="ratina" value="">ratina display</label>
+      </div>
+      <hr style="color:darkcyan" width="50%">
+
+      <label for="more"><h2>Enter any thing you wish to enter down below</h2><br><input type="text" id="more" placeholder="type your thoughts here"></label>
+
+      <br>click submit to submit the survey <br><button  type="submit" >submit</button>
+    </form>
+  </body>
+</html>
